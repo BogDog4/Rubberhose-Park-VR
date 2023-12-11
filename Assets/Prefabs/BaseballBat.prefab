@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseballBat
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bbf982d42d1eb43438dbb84e6867681d, type: 3}
+      propertyPath: m_TagString
+      value: Bat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: bbf982d42d1eb43438dbb84e6867681d, type: 3}

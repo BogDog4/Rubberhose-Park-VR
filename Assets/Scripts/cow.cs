@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BaseballSpawner : MonoBehaviour
+public class cow : MonoBehaviour
 {
     public GameObject baseballPrefab;
     public float minSpawnInterval = 1f;  // Minimum time between throws
