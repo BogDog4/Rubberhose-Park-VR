@@ -3,15 +3,14 @@ using UnityEngine;
 public class cow : MonoBehaviour
 {
     public GameObject baseballPrefab;
-    public float minSpawnInterval = 1f;  // Minimum time between throws
-    public float maxSpawnInterval = 3f;  // Maximum time between throw
+    public float SpawnInterval = 1f;  // time between throws
 
     private float nextSpawnTime;
 
     void Start()
     {
         // Set the initial spawn time
-        nextSpawnTime = Time.time + Random.Range(minSpawnInterval, maxSpawnInterval);
+        nextSpawnTime = Time.time + SpawnInterval;
     }
 
     void Update()
@@ -22,7 +21,7 @@ public class cow : MonoBehaviour
             SpawnBaseball();
 
             // Set the next spawn time within the specified interval
-            nextSpawnTime = Time.time + Random.Range(minSpawnInterval, maxSpawnInterval);
+            nextSpawnTime = Time.time + SpawnInterval;
         }
     }
 
