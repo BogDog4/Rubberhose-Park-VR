@@ -39,7 +39,7 @@ public class Baseball : MonoBehaviour
         // Check if the baseball collides with something
         if (collision.gameObject.CompareTag("Bat"))
         {
-            // Calculate a new velocity when hit by the bat
+            // Calculate the new velocity when hit by the bat
             Vector3 newVelocity = (collision.transform.forward + Vector3.up).normalized * speed * 2f;
 
             // Apply the new velocity to the baseball
@@ -48,9 +48,14 @@ public class Baseball : MonoBehaviour
             // Enable gravity when the baseball collides with the bat
             rb.useGravity = true;
         }
+        else if (collision.gameObject.CompareTag("Wall"))
+        {
+            // Destroy the baseball when it collides with a wall
+            Destroy(gameObject);
+        }
         else
         {
-            // Stop the baseball when it hits something that isnt a bat
+            // Stop the baseball when it hits something else
             rb.velocity = Vector3.zero;
         }
     }
